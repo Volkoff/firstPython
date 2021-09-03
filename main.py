@@ -70,6 +70,21 @@ def narozeni():
     rok = input("Zadej rok ")
     print(day + ". " + mesic +  ". " + rok)
 
-narozeni()
+#narozeni()
+
+def vojaci():
+    for x in range(300):
+        print(str(x+1) + ". voják u Thermopyl zdraví svého krále.")
 
 
+#vojaci()
+
+def mocnina():
+    zaklad = input("Zadejte zaklad: ")
+    mocnin = input("Zadejte mocninu ")
+    zaklad_orig = zaklad
+    for x in range(mocnin):
+        zaklad = zaklad_orig*zaklad;
+    print(zaklad)
+
+#mocnina() not completed
