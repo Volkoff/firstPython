@@ -80,11 +80,40 @@ def vojaci():
 #vojaci()
 
 def mocnina():
-    zaklad = input("Zadejte zaklad: ")
-    mocnin = input("Zadejte mocninu ")
+    zaklad = int(input("Zadejte zaklad: "))
+    mocnin = int(input("Zadejte mocninu "))
     zaklad_orig = zaklad
     for x in range(mocnin):
         zaklad = zaklad_orig*zaklad;
     print(zaklad)
 
-#mocnina() not completed
+#mocnina() 
+def table():
+    n = 12
+    m = list(list(range(1*i,(n+1)*i, i)) for i in range(1,n+1))
+    max_width = len(str(m[-1][-1])) + 1
+    for i in m:
+        i = [str(j).rjust(max_width) for j in i]
+        print(''.join(i))
+
+#table()
+
+def pin():
+    m = 4124
+    for x in range(3):
+        yourpin = int(input("Input a Pin: "))
+        if(yourpin == m):
+            print("Access granted")
+            return
+    print("Access not granted")
+
+#pin()
+
+def dmi():
+    vyska = float(input("Zadejte vysku: "))
+    vaha = int(input("Zadejte vahu: "))
+    vyska = vyska / 100
+    bmi = (vaha / (vyska*vyska))
+    print(bmi)
+
+#dmi()
